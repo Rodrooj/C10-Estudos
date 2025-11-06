@@ -63,7 +63,7 @@ Esta seção explora padrões de alto nível para organizar a estrutura geral de
     * **View:** Camada de apresentação (UI).
     * **Controller:** Intermediário que recebe entradas do usuário (da View) e atualiza o Model.
 * **Status:** `[x] Implementado`
-* **Exemplo:** `[[Link para a pasta /arquitetura/mvc](https://github.com/Rodrooj/C10-Estudos/tree/main/C10-Estudos/MVC)]`
+* **Exemplo:** `[Link para a pasta /arquitetura/mvc](https://github.com/Rodrooj/C10-Estudos/tree/main/C10-Estudos/MVC)`
 
 ### MVVM (Model-View-ViewModel)
 * **Descrição:** Uma evolução do MVC, popular em frameworks modernos (WPF, Angular, Vue, Swift, Kotlin).
