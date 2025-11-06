@@ -1,5 +1,5 @@
 //
-//  CharacterView.swift
+//  PersonagemView.swift
 //  C10-Estudos
 //
 //  Created by Rodrigo Barbosa Pereira on 04/11/25.
@@ -7,26 +7,35 @@
 
 import SwiftUI
 
-struct CharacterView: View {
+struct PersonagemView: View {
+    @StateObject private var controller = PersonagemController()
+    
     var body: some View {
         Text("Escolha seu personagem:")
             .padding()
         
         HStack(spacing: 8) {
             Button("Criar Mago") {
-                PersonagemController.criarPersonagem(creator: MagoCreator())                
+                controller.criarPersonagem(tipo: .mago)
             }
             Button("Criar Guerreiro") {
-                PersonagemController.criarPersonagem(creator: GuerreiroCreator())
+                controller.criarPersonagem(tipo: .guerreiro)
             }
             Button("Criar Arqueiro") {
-                PersonagemController.criarPersonagem(creator: ArqueiroCreator())
+                controller.criarPersonagem(tipo: .arqueiro)
             }
         }
         .padding()
+        
+        if let personagemAtual = controller.personagemAtual {
+            Text("Nome: \(personagemAtual.nome)")
+            Text("Classe: \(personagemAtual.classe)")
+            Text("Pontos de Vida: \(personagemAtual.pontosDeVida)")
+            Text("Habilidade: \(personagemAtual.habilidade())")
+        }
     }
 }
 
 #Preview {
-    CharacterView()
+    PersonagemView()
 }

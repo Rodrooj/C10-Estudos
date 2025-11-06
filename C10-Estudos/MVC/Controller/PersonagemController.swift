@@ -6,9 +6,26 @@
 //
 
 import Foundation
+import Combine
 
-class PersonagemController {
-    static func criarPersonagem(creator: PersonagemCreator) {
-        print("\(creator.criarPersonagem())")
+class PersonagemController: ObservableObject {
+    enum PersonagemTipo {
+        case mago
+        case guerreiro
+        case arqueiro
     }
+    
+    @Published var personagemAtual: Personagem?
+    
+    func criarPersonagem(tipo: PersonagemTipo) {
+        switch tipo {
+        case .mago:
+            self.personagemAtual = MagoCreator().factory()
+        case .guerreiro:
+            self.personagemAtual = GuerreiroCreator().factory()
+        case .arqueiro:
+            self.personagemAtual = ArqueiroCreator().factory()
+        }
+    }
+    
 }
