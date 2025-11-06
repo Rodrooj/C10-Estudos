@@ -30,7 +30,7 @@ Este repositório é dedicado ao estudo prático e documentação dos principais
 Padrões que abstraem o processo de instanciação, tornando o sistema independente de como seus objetos são criados, compostos e representados.
 
 * [ ] **Singleton:** Garante que uma classe tenha apenas uma instância e fornece um ponto global de acesso a ela.
-* [ ] **Factory Method:** Define uma interface para criar um objeto, mas deixa as subclasses decidirem qual classe instanciar.
+* [x] **Factory Method:** Define uma interface para criar um objeto, mas deixa as subclasses decidirem qual classe instanciar.
 * [ ] **Abstract Factory:** Fornece uma interface para criar famílias de objetos relacionados ou dependentes sem especificar suas classes concretas.
 * [ ] **Builder:** Separa a construção de um objeto complexo de sua representação, permitindo que o mesmo processo de construção crie diferentes representações.
 
@@ -62,8 +62,8 @@ Esta seção explora padrões de alto nível para organizar a estrutura geral de
     * **Model:** Camada de dados e lógica de negócio.
     * **View:** Camada de apresentação (UI).
     * **Controller:** Intermediário que recebe entradas do usuário (da View) e atualiza o Model.
-* **Status:** `[ ] Em estudo`
-* **Exemplo:** `[Link para a pasta /arquitetura/mvc]`
+* **Status:** `[x] Implementado`
+* **Exemplo:** `[[Link para a pasta /arquitetura/mvc](https://github.com/Rodrooj/C10-Estudos/tree/main/C10-Estudos/MVC)]`
 
 ### MVVM (Model-View-ViewModel)
 * **Descrição:** Uma evolução do MVC, popular em frameworks modernos (WPF, Angular, Vue, Swift, Kotlin).
@@ -96,13 +96,13 @@ Este projeto é um *monorepo* contendo múltiplos mini-projetos (um para cada pa
 
 1.  Clone o repositório:
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/Rodrooj/C10-Estudos)
     ```
 2.  Navegue até a pasta do exemplo desejado:
     ```bash
-    cd design-patterns/criacionais/Singleton
+    cd C10-Estudos/MVC
     ```
-3.  Siga as instruções específicas no `README.md` dentro da pasta de cada exemplo. (Ex: como compilar o código, executar testes, etc.).
+3.  Siga as instruções específicas no `README.md` dentro da pasta de cada exemplo ou mude a view que será carregada em `C10_EstudosApp.swift`.
 
 ## 💻 Tecnologias Utilizadas
 
